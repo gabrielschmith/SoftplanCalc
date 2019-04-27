@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplanCalc.Services", "So
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplanCalc.Models", "SoftplanCalc.Models\SoftplanCalc.Models.csproj", "{E90CFA55-6CBD-4E17-932C-ACFA9D7B0E48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplanCalc.Logger", "SoftplanCalc.Logger\SoftplanCalc.Logger.csproj", "{20C54DE4-2A14-4119-83EA-DD706822489A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplanCalc.Utils", "SoftplanCalc.Utils\SoftplanCalc.Utils.csproj", "{9AA7F624-E458-4076-A89A-8C6FBA0FE203}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +29,13 @@ Global
 		{E90CFA55-6CBD-4E17-932C-ACFA9D7B0E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E90CFA55-6CBD-4E17-932C-ACFA9D7B0E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E90CFA55-6CBD-4E17-932C-ACFA9D7B0E48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C54DE4-2A14-4119-83EA-DD706822489A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C54DE4-2A14-4119-83EA-DD706822489A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C54DE4-2A14-4119-83EA-DD706822489A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C54DE4-2A14-4119-83EA-DD706822489A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AA7F624-E458-4076-A89A-8C6FBA0FE203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA7F624-E458-4076-A89A-8C6FBA0FE203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA7F624-E458-4076-A89A-8C6FBA0FE203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA7F624-E458-4076-A89A-8C6FBA0FE203}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

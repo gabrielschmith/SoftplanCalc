@@ -9,9 +9,12 @@
   <ItemGroup>
     <Compile Remove="Controllers\ValuesController.cs" />
     <Compile Remove="Models\CalculateInterestInput.cs" />
+    <Compile Remove="Controllers\EnvironmentInfoController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SoftplanCalc.Models\SoftplanCalc.Models.csproj" />
     <ProjectReference Include="..\SoftplanCalc.Services\SoftplanCalc.Services.csproj" />
+    <ProjectReference Include="..\SoftplanCalc.Logger\SoftplanCalc.Logger.csproj" />
+    <ProjectReference Include="..\SoftplanCalc.Utils\SoftplanCalc.Utils.csproj" />
   </ItemGroup>
 </Project>
