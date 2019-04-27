@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplanCalc.Api", "SoftplanCalc\SoftplanCalc.Api.csproj", "{2144E75E-935E-41A6-8C9D-E832D8EA7D84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplanCalc.Services", "SoftplanCalc.Services\SoftplanCalc.Services.csproj", "{DD1E9336-0729-4DCA-9880-167B8B7B4465}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplanCalc.Models", "SoftplanCalc.Models\SoftplanCalc.Models.csproj", "{E90CFA55-6CBD-4E17-932C-ACFA9D7B0E48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2144E75E-935E-41A6-8C9D-E832D8EA7D84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2144E75E-935E-41A6-8C9D-E832D8EA7D84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2144E75E-935E-41A6-8C9D-E832D8EA7D84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2144E75E-935E-41A6-8C9D-E832D8EA7D84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD1E9336-0729-4DCA-9880-167B8B7B4465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD1E9336-0729-4DCA-9880-167B8B7B4465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD1E9336-0729-4DCA-9880-167B8B7B4465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD1E9336-0729-4DCA-9880-167B8B7B4465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90CFA55-6CBD-4E17-932C-ACFA9D7B0E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E90CFA55-6CBD-4E17-932C-ACFA9D7B0E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E90CFA55-6CBD-4E17-932C-ACFA9D7B0E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90CFA55-6CBD-4E17-932C-ACFA9D7B0E48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
