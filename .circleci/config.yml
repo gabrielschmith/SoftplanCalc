@@ -5,12 +5,6 @@ jobs:
     steps:
       - checkout
       - run: docker build -t gabrielschmith/softplan-api:$CIRCLE_BUILD_NUM .
-  test:
-    machine: true
-    steps:
-      - checkout
-      - run: docker build -f DockerfileTest -t gabrielschmith/softplan-api-test:$CIRCLE_BUILD_NUM .
-      - run: docker run -it gabrielschmith/softplan-api-test:$CIRCLE_BUILD_NUM
       - run: echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
       - run: docker push gabrielschmith/softplan-api:$CIRCLE_BUILD_NUM
 workflows:
