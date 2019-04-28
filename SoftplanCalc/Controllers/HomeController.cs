@@ -1,14 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace SoftplanCalc.Api.Controllers
 {
     /// <summary>
-    /// Version controller.
+    /// Home controller.
     /// </summary>
-    [Route("[controller]")]
-    public class VersionController : Controller
+    [Route("/")]
+    public class HomeController : Controller
     {
         /// <summary>
         /// Get this instance.
@@ -17,7 +21,7 @@ namespace SoftplanCalc.Api.Controllers
         [HttpGet]
         public ActionResult Get()
         {
-            return Ok($"Softplan Calc Version Api: {GetType().Assembly.GetName().Version}");
+            return RedirectToAction("get", "version");
         }
     }
 }
