@@ -10,6 +10,8 @@ jobs:
     steps:
       - checkout
       - run: docker build -f DockerfileTest -t gabrielschmith/softplan-api-test:$CIRCLE_BUILD_NUM .
+      - run: |
+          docker run -it gabrielschmith/softplan-api-test:$CIRCLE_BUILD_NUM
 
 workflows:
   version: 2
