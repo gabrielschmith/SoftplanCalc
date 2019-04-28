@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SoftplanCalc.Logger;
 using SoftplanCalc.Models;
@@ -31,6 +28,7 @@ namespace SoftplanCalc.Api.Controllers
         /// <summary>
         /// Initializes a new instance of the <see cref="T:SoftplanCalc.Api.Controllers.CalculateInterestController"/> class.
         /// </summary>
+        /// <param name="logger">Logger.</param>
         /// <param name="calculateInterestService">Calculate interest service.</param>
         public CalculateInterestController(IBaseLogger logger, ICalculateInterestService calculateInterestService)
         {
@@ -42,25 +40,13 @@ namespace SoftplanCalc.Api.Controllers
         /// Get this instance.
         /// </summary>
         /// <returns>The get.</returns>
-        [HttpGet()]
+        [HttpGet]
         public ActionResult Get([FromQuery] CalculateInterestInput input)
         {
-            try
-            {
-                AssertionConcern.AssertArgumentNotNull(input, "The Calculate Interest Input cannot be null.");
-                AssertionConcern.AssertArgumentNotNull(input.ValorInicial, "The Valor Inicial cannot be null.");
-                AssertionConcern.AssertArgumentNotNull(input.Meses, "The Meses cannot be null.");
+            var result = _calculateInterestService.Calculate(input);
+            _logger.Log($"Result calculated: {result}", LogEvent.Debug);
 
-                var result = _calculateInterestService.Calculate(input);
-                _logger.Log($"Result calculated: {result}", LogEvent.Debug);
-
-                return Ok(result);
-            }
-            catch(Exception ex)
-            {
-                _logger.Log(ex, LogEvent.Fatal);
-                return BadRequest(ex);
-            }
+            return Ok(result);
         }
     }
 }

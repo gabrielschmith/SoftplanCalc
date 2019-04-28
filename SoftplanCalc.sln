@@ -11,6 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplanCalc.Logger", "Soft
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplanCalc.Utils", "SoftplanCalc.Utils\SoftplanCalc.Utils.csproj", "{9AA7F624-E458-4076-A89A-8C6FBA0FE203}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplanCalc.Api.Tests", "SoftplanCalc.Api.Tests\SoftplanCalc.Api.Tests.csproj", "{81EF8FF0-0FA7-44DB-9569-C24589FB91FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2FF57B04-E712-4F42-BCAB-0B9D6FBD4401}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+		DockerfileTest = DockerfileTest
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,5 +45,9 @@ Global
 		{9AA7F624-E458-4076-A89A-8C6FBA0FE203}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AA7F624-E458-4076-A89A-8C6FBA0FE203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AA7F624-E458-4076-A89A-8C6FBA0FE203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81EF8FF0-0FA7-44DB-9569-C24589FB91FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81EF8FF0-0FA7-44DB-9569-C24589FB91FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81EF8FF0-0FA7-44DB-9569-C24589FB91FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81EF8FF0-0FA7-44DB-9569-C24589FB91FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

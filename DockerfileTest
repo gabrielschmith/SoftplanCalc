@@ -1,0 +1,23 @@
+FROM microsoft/dotnet:2.2-runtime AS base
+WORKDIR /app
+
+FROM microsoft/dotnet:2.2-sdk AS build
+WORKDIR /src
+COPY SoftplanCalc.Api.Tests/SoftplanCalc.Api.Tests.csproj SoftplanCalc.Api.Tests/
+COPY SoftplanCalc.Services/SoftplanCalc.Services.csproj SoftplanCalc.Services/
+COPY SoftplanCalc.Models/SoftplanCalc.Models.csproj SoftplanCalc.Models/
+COPY SoftplanCalc/SoftplanCalc.Api.csproj SoftplanCalc/
+COPY SoftplanCalc.Logger/SoftplanCalc.Logger.csproj SoftplanCalc.Logger/
+COPY SoftplanCalc.Utils/SoftplanCalc.Utils.csproj SoftplanCalc.Utils/
+RUN dotnet restore SoftplanCalc.Api.Tests/SoftplanCalc.Api.Tests.csproj
+COPY . .
+WORKDIR /src/SoftplanCalc.Api.Tests
+RUN dotnet build SoftplanCalc.Api.Tests.csproj -c Release -o /app
+
+FROM build AS publish
+RUN dotnet publish SoftplanCalc.Api.Tests.csproj -c Release -o /app
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app .
+ENTRYPOINT ["dotnet", "SoftplanCalc.Api.Tests.dll"]

@@ -31,8 +31,19 @@ namespace SoftplanCalc.Services.CalculateInterest
         /// <param name="input">Input.</param>
         public decimal Calculate(CalculateInterestInput input)
         {
+            return Calculate(input, _options.InterestRate);
+        }
+
+        /// <summary>
+        /// Calculate the specified input and rate.
+        /// </summary>
+        /// <returns>The calculate.</returns>
+        /// <param name="input">Input.</param>
+        /// <param name="rate">Rate.</param>
+        public decimal Calculate(CalculateInterestInput input, decimal rate)
+        {
             var initialValue = Convert.ToDouble(input.ValorInicial);
-            var interestRate = Convert.ToDouble(_options.InterestRate);
+            var interestRate = Convert.ToDouble(rate);
             var interestRateCalculed = Math.Pow(1 + interestRate, input.Meses);
             var result = initialValue * interestRateCalculed;
             var resultWithTruncate = Convert.ToDecimal(Math.Truncate(100 * result) / 100);

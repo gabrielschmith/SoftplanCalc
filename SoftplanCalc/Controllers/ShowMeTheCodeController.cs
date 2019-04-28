@@ -9,7 +9,7 @@ namespace SoftplanCalc.Api.Controllers
     /// Show me the code controller.
     /// </summary>
     [Route("/showmethecode")]
-    public class ShowMetheCodeController : Controller
+    public class ShowMeTheCodeController : Controller
     {
         /// <summary>
         /// The configuration.
@@ -20,7 +20,7 @@ namespace SoftplanCalc.Api.Controllers
         /// Initializes a new instance of the <see cref="T:SoftplanCalc.Api.Controllers.ShowMetheCodeController"/> class.
         /// </summary>
         /// <param name="configuration">Configuration.</param>
-        public ShowMetheCodeController(IConfiguration configuration)
+        public ShowMeTheCodeController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
