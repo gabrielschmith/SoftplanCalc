@@ -21,7 +21,7 @@ namespace SoftplanCalc.Api.Controllers
         [HttpGet]
         public ActionResult Get()
         {
-            return RedirectToAction("get", "version");
+            return Redirect("/swagger/index.html");
         }
     }
 }
